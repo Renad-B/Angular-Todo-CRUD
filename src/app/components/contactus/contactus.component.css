@@ -1,0 +1,50 @@
+/* Contact Us Container Styles */
+body{
+  padding: 40px;
+  margin: 100;
+  background-color: #a89595
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 200px auto;
+    padding: 20px;
+    background: #444;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Contact Us Heading */
+  .contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Us Paragraphs */
+  .contact-container p {
+    line-height: 1.6;
+  }
+  
+  /* Social Media Links */
+  .contact-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-container ul li {
+    margin: 0 10px;
+  }
+  
+  .contact-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-container ul li a:hover {
+    color: #aaa;
+  }
+  

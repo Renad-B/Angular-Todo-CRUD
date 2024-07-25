@@ -1,0 +1,45 @@
+<body>
+<div class="todo-details-container" *ngIf="todo">
+    <div class="d-flex flex-column justify-content-center text-center class1">
+      <h2 class="text-danger">To do Details</h2>
+      <h3>Task title: {{ todo.title }}</h3>
+      <h3>Task Completed: {{ todo.completed }}</h3>
+    </div>
+  
+    <div class="container px-5 my-5">
+      <div class="borderClass">
+        <form id="contactform" (ngSubmit)="updateTodo()" #form1="ngForm">
+          <div class="mb-3 d-flex">
+            <label class="form-label w-25 fw-bold" for="title">Task Title: </label>
+            <input
+              class="form-control w-75"
+              type="text"
+              placeholder="Todo Title"
+              id="title1"
+              [(ngModel)]="todo.title"
+              name="title1"
+              #input="ngModel"
+              [ngClass]="{'is-invalid':(input.touched || input.dirty) && input.invalid}"
+            />
+          </div>
+          <div class="mb-3 d-flex">
+            <label class="form-label fw-bold" for="completed">Completed</label>
+            <input
+              type="checkbox"
+              id="completed"
+              name="completed"
+              class="form-check w-50"
+              [(ngModel)]="todo.completed"
+            />
+          </div>
+          <div class="g-grid">
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit" [disabled]="form1.invalid">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+      
+</body>

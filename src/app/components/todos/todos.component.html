@@ -1,0 +1,61 @@
+<body>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <div class="content">
+    <div class="todo-container">
+      <h2>
+        <i class="bx bx-edit-alt" style="color: #c49a9a"></i> My To Do List
+      </h2>
+      <form id="todo-form" (ngSubmit)="createToDo()">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Add a new task..."
+          name="title1"
+          [(ngModel)]="newToDo.title"
+        />
+        <a data-mdb-toggle="tooltip" title="Set due date"> </a>
+        <button type="submit">Add</button>
+      </form>
+      <hr class="my-4" />
+      <ul class="list-group">
+        <li
+          *ngFor="let todo of todos; trackBy: trackById"
+          class="list-group-item"
+        >
+          <div class="todo-item">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                [(ngModel)]="todo.completed"
+                (ngModelChange)="updateToDo(todo)"
+              />
+            </div>
+            <p
+              class="lead fw-normal mb-0 w-100 ms-2"
+              [ngClass]="{ 'text-decoration-line-through': todo.completed }"
+              [routerLink]="['/todos', todo.id]"
+            >
+              {{ todo.title }}
+            </p>
+            <a
+              class="text-danger"
+              data-mdb-toggle="tooltip"
+              title="Delete to do"
+              (click)="deleteToDo(todo.id)"
+            >
+              <i class="bx bxs-trash" style="color: #c49a9a"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>

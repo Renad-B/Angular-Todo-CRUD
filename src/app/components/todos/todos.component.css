@@ -1,0 +1,101 @@
+ /* To Do Container Styles */
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #a89595;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  max-width: 600px;
+  margin: 230px auto;
+  padding: 20px;
+  background: #444;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* To Do Header */
+.todo-container h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+#todo-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+#todo-form a {
+  margin-left: 10px;
+}
+
+#todo-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#todo-form button:hover {
+  background-color: #555;
+}
+
+.lead.text-decoration-line-through {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* To Do List Styles */
+.list-group {
+  list-style: none;
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #555;
+  color: #fff;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.list-group-item a {
+  margin-left: auto;
+}

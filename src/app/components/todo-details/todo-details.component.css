@@ -1,0 +1,51 @@
+/* To Do Details Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a89595;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .todo-details-container {
+    max-width: 600px;
+    margin: 230px auto;
+    padding: 20px;
+    background: #444;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  /* To Do Details Header */
+  .todo-details-container h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* To Do Details Paragraph */
+  .todo-details-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Back Button */
+  .todo-details-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .todo-details-container button:hover {
+    background-color: #555;
+  }
+  
